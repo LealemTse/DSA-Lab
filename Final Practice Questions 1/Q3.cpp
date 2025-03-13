@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    
     int invt =23, sold=17, left;
     float price=9.99f, tot_sal;
     string low_level="Low Inentory", suf_level="Sufficent Inventroy", level;
