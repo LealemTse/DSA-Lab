@@ -4,6 +4,7 @@
 #define TAX 0.09
 using namespace std;
 int main(){
+    
     const double tax=0.15;
     double price;
     string prod_name, low_level="(Warning!) Low Inventory", suf_level="Sufficent Inventory";
