@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    
     string low_level="Low Inentory", suf_level="Sufficent Inventroy", level;
 
     int ini_inv, new_inv, item_sold;
