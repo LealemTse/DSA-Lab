@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    
     int prod_cat;
     cout<<"Enter Product Catagory(1-5): ";
     cin>>prod_cat;
