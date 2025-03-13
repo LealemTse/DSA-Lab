@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    
     float sales=169.83;
     int inv=6;
     auto tot_sales=sales;
