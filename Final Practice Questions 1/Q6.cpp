@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    
     const double tax=0.15;
 
     cout<<"Preprocessed defined Tax Value: " <<TAX<<endl;
