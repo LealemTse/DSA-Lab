@@ -18,7 +18,7 @@ int main(){
     c*=3;//This one multiplies the float vlaue of 3.14 by 3 and ammend 'c' to there product
     isTrue=false; //This chagnes the value of isTrue from true to flase  giving out '0' 
 
-    cout<<"Chracter: " <<a <<endl;
+    cout<<"Upadate Chracter: " <<a <<endl;
     cout<<"Integer: " <<b <<endl;
     cout<<"Float: " <<c <<endl;
     cout<<"Boolean: " <<isTrue <<endl;
