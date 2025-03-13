@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    
     int dir_inti(51);
     int as_inti;
     int li_inti{34};
