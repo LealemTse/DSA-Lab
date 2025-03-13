@@ -19,9 +19,9 @@ int main(){
     isTrue=false; //This chagnes the value of isTrue from true to flase  giving out '0' 
 
     cout<<"Upadate Chracter: " <<a <<endl;
-    cout<<"Integer: " <<b <<endl;
-    cout<<"Float: " <<c <<endl;
-    cout<<"Boolean: " <<isTrue <<endl;
+    cout<<"Upadate Integer: " <<b <<endl;
+    cout<<"Upadate Float: " <<c <<endl;
+    cout<<"Upadate Boolean: " <<isTrue <<endl;
 
 
 }
