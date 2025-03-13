@@ -1,0 +1,16 @@
+// Write a C++ program that defines the value of pi using both a preprocessor definition
+// and a const variable, then prints both values. Explain the difference between these
+// two approaches.
+
+#include<iostream>
+#define PI 3.14159
+
+using namespace std;
+
+int main(){
+const double pi=3.14159;
+
+    cout<<"PI Using Define " <<PI<<endl;
+    cout<<"PI Using Const " <<pi<<endl;
+
+}
