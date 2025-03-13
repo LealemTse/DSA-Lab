@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    
     int ini_inv, new_inv, item_sold;
     double price, tot_sold;
     
