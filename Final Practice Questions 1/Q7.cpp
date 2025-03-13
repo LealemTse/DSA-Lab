@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    
     string prod_name;
     int prod_cat;
     int ini_inv;
