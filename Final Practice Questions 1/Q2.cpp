@@ -4,6 +4,7 @@
 using namespace std;
  
 int main(){
+    
     string name="Bolbs";
     int prod_catg= 3;
     int qunt=3;
