@@ -3,6 +3,7 @@
 using namespace std;
  
 int main(){
+    
     double price,tot_price;
     int num_sold;
     cout<<"Enter the Price of the Item:";
