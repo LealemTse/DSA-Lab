@@ -3,32 +3,33 @@
 using namespace std;
 
 // void duplicate(int a, int b, int c, int d){
-// void duplicate(int& a, int& b, int& c, int& d){
-
-//     a*=2;
-//     b*=2;
-//     c*=2;
-//     d=a+b+c;  
-//    cout<<d<<endl;
-// }
-
-// string cocatinate(const string& t, const string& u){
-inline string cocatinate(string t, string u){
-    return t+u;
+void duplicate(int& a, int& b, int& c, int& d){
+    a*=2;
+    b*=2;
+    c*=2;
+    d=a+b+c;  
+   cout<<d<<endl;
 }
+
+// string toge(const string& t, const string& u){
+string toge(string t, string u, string m){
+    m=t+u;
+    return m;
+}
+
 int main (){
-    // int x=1, y=3, z=7, g ;
+    int x=1, y=3, z=7, g ;
 
-    string j="Hello";
+    string j="Hello ";
     string i="World!";
+    string k;
 
-    cocatinate(j,i);
+    k=toge(j,i,k);
+    duplicate(x,y,z,g);
+    cout<<"x:"<<x<<"y:"<<y<<"z:"<<z<<endl;
 
-    // duplicate(x,y,z,g);
-    // cout<<"x:"<<x<<"y:"<<y<<"z:"<<z<<endl;
-
-    cout<<cocatinate <<endl;
-    //  return 0;
+    cout<<k<<endl;
+     return 0;
 
 }
 
