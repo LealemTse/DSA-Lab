@@ -11,7 +11,7 @@ int main(){
     cout<<"Enter the Items Sold:";
     cin>>num_sold;
 
-    for(int i=1; i!=num_sold; i++){
+    for(int i=1; i<=num_sold; i++){
         tot_price=price*i;
         cout<<"Receipt For "<<i<<" Items is: " <<tot_price<<", " <<endl;
     }
