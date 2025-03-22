@@ -17,21 +17,10 @@ class Node{
 //node creations
 Node(int data1){
     data=data1;
-    next=nullptr;
+    next=NULL;
 }
 
 };
-// the conncetion makers
-Node* convetArr2LL(vector<int> &arr){
-    Node* head =new Node(arr[0]); //creat where the node is in the array
-    Node* moverHead=head;
-    for(int i; i<arr.size();i++){
-        Node* tempNode =new Node(arr[i]);
-        moverHead-> next=tempNode;
-        moverHead=tempNode; 
-    }
-    return head;
-}
 void printList(Node*head){ //to print all the elents of the linked list
     Node* moverHead = head;
     while(moverHead!=NULL){
@@ -43,24 +32,50 @@ void printList(Node*head){ //to print all the elents of the linked list
 
     
 } 
+// the conncetion makers
+Node* convetArr2LL(vector<int>& arr){
+    Node* head =new Node(arr[0]); //creat where the node is in the array
+    Node* moverHead=head;
+    for(int i=0; i<arr.size();i++){
+        Node* tempNode =new Node(arr[i]);
+        moverHead-> next=tempNode;
+        moverHead=tempNode; 
+    }
+    return head;
+}
+
 //instering at the first 
-Node* insetHead(Node*head, int value){
+Node* insertHead(Node*head, int value){
     Node* newNode =new Node(value);
-    newNode->next =head;// if we inter 
+    newNode->next =head;// if we interchang this the next line head 
+    //will 0 and ther wont be a link betwen the fist head and the new heads
     head=newNode;
         
     return head;
 }
 
 //inster to the tail 
-Node* insetTail(Node*head, int value){
+Node* insertTail(Node*head, int value, int k){
    Node* moverHead = head;
    while(moverHead->next != NULL){
     moverHead=moverHead ->next;
    }
 }
 //inserting at the k places
-Node*insetAtK(Node*head, int value){
+Node*insertAtK(Node*head, int value){
+    Node*moverHead= head;
+    int count=0;
+    while (moverHead)
+    {
+        count++;
+        if(count==k-1){
+            Node*tempo=moverHead->next;
+            Node* newNode =new Node(value);
+            moverHead->next=newNode;
+            newNode->next=temp;
+
+        }
+    }
     
 }
 
@@ -70,13 +85,14 @@ int main(){
     vector<int> arr ={1,2,3,4,5};
     Node* head=convetArr2LL(arr);
     Node*head2 = insertHead(head, 0);
-    Node*head3 = insetTail(head,6);
+    Node*head3 = insertTail(head,6);
+    Node*head4 = insertAtK(head4,9,3);
 
 //  cout<<head<<endl //this will print the memory address of the data
-    cout<<head->data<<endl; //this will print "1" the head or the fist data in the list only
-    printList(head);
-    printList(head2);
-    printList(head3);
+    // cout<<head->data<<endl; //this will print "1" the head or the fist data in the list only
+    // printList(head);
+    // printList(head2);
+    printList(head4);
 
 
 
