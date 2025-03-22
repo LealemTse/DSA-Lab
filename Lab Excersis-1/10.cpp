@@ -1,3 +1,4 @@
+//factorial making
 #include<iostream>
 
 using namespace std;
