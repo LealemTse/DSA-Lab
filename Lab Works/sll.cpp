@@ -145,7 +145,7 @@ int main(){
 
  Node* head3 = insertTail(head2, 6);
 
- Node* head4 = insertKthNode(head3, 9, 3);
+ Node* head4 = insertKthNode(head3, 9, 4);
 
  print(head4);
 
