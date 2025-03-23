@@ -63,17 +63,16 @@ Node* insertTail(Node*head, int value, int k){
    }
 }
 //inserting at the k places
-Node*insertAtK(Node*head, int value){
+Node*insertAtK(Node*head, int value, int k){
     Node*moverHead= head;
     int count=0;
-    while (moverHead)
-    {
+    while (moverHead){
         count++;
         if(count==k-1){
             Node*tempo=moverHead->next;
             Node* newNode =new Node(value);
             moverHead->next=newNode;
-            newNode->next=temp;
+            newNode->next=tempo;
 
         }
     }
