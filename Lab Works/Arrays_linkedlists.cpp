@@ -17,7 +17,7 @@ class Node{
 //node creations
 Node(int data1){
     data=data1;
-    next=NULL;
+    next=nullptr;
 }
 
 };
@@ -58,7 +58,6 @@ Node* insertTail(Node*head, int value){
    Node* moverHead = head;
    while(moverHead->next != NULL){
     moverHead=moverHead ->next;
-    return head;
    }
    Node* newNode =new Node(value);
    moverHead->next=newNode;
@@ -72,10 +71,10 @@ Node*insertAtK(Node*head, int value, int k){
     while(moverHead){
         count++;
         if(count==k-1){
-            Node*tempo=moverHead->next;
+            Node* temp=moverHead->next;
             Node* newNode =new Node(value);
             moverHead->next=newNode;
-            newNode->next=tempo;
+            newNode->next=temp;
         }
         moverHead=moverHead->next;
     }
