@@ -21,6 +21,19 @@ Node(int data1){
 }
 
 };
+
+// the conncetion makers
+Node* convetArr2LL(vector<int> &arr){
+    Node* head =new Node(arr[0]); //creat where the node is in the array
+    Node* moverHead=head;
+    for(int i=1; i<arr.size();i++){
+        Node* tempNode =new Node(arr[i]);
+        moverHead-> next=tempNode;
+        moverHead=tempNode; 
+    }
+    return head;
+}
+
 void printList(Node*head){ //to print all the elents of the linked list
     Node* moverHead = head;
     while(moverHead!=NULL){
@@ -29,20 +42,7 @@ void printList(Node*head){ //to print all the elents of the linked list
     }
     cout<<"NULL";
     cout<<'\n';
-
-    
 } 
-// the conncetion makers
-Node* convetArr2LL(vector<int>& arr){
-    Node* head =new Node(arr[0]); //creat where the node is in the array
-    Node* moverHead=head;
-    for(int i=0; i<arr.size();i++){
-        Node* tempNode =new Node(arr[i]);
-        moverHead-> next=tempNode;
-        moverHead=tempNode; 
-    }
-    return head;
-}
 
 //instering at the first 
 Node* insertHead(Node*head, int value){
@@ -59,6 +59,7 @@ Node* insertTail(Node*head, int value, int k){
    Node* moverHead = head;
    while(moverHead->next != NULL){
     moverHead=moverHead ->next;
+    return head;
    }
 }
 //inserting at the k places
