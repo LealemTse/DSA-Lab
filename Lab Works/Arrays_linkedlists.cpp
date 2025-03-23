@@ -45,38 +45,41 @@ void printList(Node*head){ //to print all the elents of the linked list
 } 
 
 //instering at the first 
-Node* insertHead(Node*head, int value){
+Node* insertHead(Node* head, int value){
     Node* newNode =new Node(value);
     newNode->next =head;// if we interchang this the next line head 
     //will 0 and ther wont be a link betwen the fist head and the new heads
     head=newNode;
-        
     return head;
 }
 
 //inster to the tail 
-Node* insertTail(Node*head, int value, int k){
+Node* insertTail(Node*head, int value){
    Node* moverHead = head;
    while(moverHead->next != NULL){
     moverHead=moverHead ->next;
     return head;
    }
+   Node* newNode =new Node(value);
+   moverHead->next=newNode;
+   return head;
 }
+
 //inserting at the k places
 Node*insertAtK(Node*head, int value, int k){
     Node*moverHead= head;
     int count=0;
-    while (moverHead){
+    while(moverHead){
         count++;
         if(count==k-1){
             Node*tempo=moverHead->next;
             Node* newNode =new Node(value);
             moverHead->next=newNode;
             newNode->next=tempo;
-
         }
+        moverHead=moverHead->next;
     }
-    
+    return head;
 }
 
 
@@ -84,9 +87,9 @@ int main(){
     //linked list creation
     vector<int> arr ={1,2,3,4,5};
     Node* head=convetArr2LL(arr);
-    Node*head2 = insertHead(head, 0);
-    Node*head3 = insertTail(head,6);
-    Node*head4 = insertAtK(head4,9,3);
+    Node* head2 = insertHead(head, 0);
+    Node* head3 = insertTail(head,6);
+    Node* head4 = insertAtK(head4,9,3);
 
 //  cout<<head<<endl //this will print the memory address of the data
     // cout<<head->data<<endl; //this will print "1" the head or the fist data in the list only
