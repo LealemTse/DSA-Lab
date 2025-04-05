@@ -126,12 +126,16 @@ Node* revese(Node*head){
     Node*tempo=nullptr;
     Node*cur=head;
 
-    while(curr!=nullptr){
+    while(cur!=nullptr){
         tempo=cur->prev;
         cur->prev=cur->next;
         cur->next=tempo;
         cur=cur->prev;
     }
+    if(tempo!=nullptr){
+        head=tempo->prev;
+    }
+    return head;
 }
 
 
@@ -160,4 +164,7 @@ int main(){
 
     Node*head6=deletk(head5,4);
     printlist(head6);
+
+    Node*head7=revese(head6);
+    printlist(head7);
 }
