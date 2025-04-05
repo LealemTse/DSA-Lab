@@ -121,6 +121,19 @@ Node* deletk(Node*head, int k){
      
 }
 
+// REVERSE:
+Node* revese(Node*head){
+    Node*tempo=nullptr;
+    Node*cur=head;
+
+    while(curr!=nullptr){
+        tempo=cur->prev;
+        cur->prev=cur->next;
+        cur->next=tempo;
+        cur=cur->prev;
+    }
+}
+
 
 int main(){
     int arr[]={10,20,30,40,50};
