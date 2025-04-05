@@ -1,3 +1,5 @@
+//An array list
+
 #include<iostream>
 using namespace std;
 
@@ -90,6 +92,35 @@ Node*deletHead(Node*head){
     return head;
 }
 
+Node*deletTail(Node*head){
+    if(head->next==nullptr||head==nullptr) return nullptr;
+    Node*tempo= head;
+    while(tempo->next!=nullptr){
+        tempo=tempo->next;
+    }
+    tempo->prev->next=nullptr;
+    delete tempo;
+    return head;
+}
+
+Node* deletk(Node*head, int k){
+    if(k<=1 || head==nullptr) return deletHead(head);
+    Node* tempo = head;
+    int count =1;
+    while (tempo!=nullptr && count<k-1){
+     tempo=tempo->next;
+     count++;   
+    }
+    if(tempo==nullptr) return head; //k is out of range;
+
+    if(tempo->prev!=nullptr) tempo->prev->next=tempo->next;
+    if(tempo->next!=nullptr) tempo->next->prev=tempo->prev;
+
+    delete tempo;;
+    return head;
+     
+}
+
 
 int main(){
     int arr[]={10,20,30,40,50};
@@ -111,5 +142,9 @@ int main(){
     Node*head4=deletHead(head3);
     printlist(head4);
     
+    Node*head5=deletTail(head4);
+    printlist(head5);
 
+    Node*head6=deletk(head5,4);
+    printlist(head6);
 }
